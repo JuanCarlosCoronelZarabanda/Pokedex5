@@ -1,0 +1,48 @@
+const bgByType = {
+    normal : "bg-gradient-to-t from-[#7C3F4C] via-[#BC6B7C] to-[#735259]",
+    fighting : "bg-gradient-to-t from-[#CB735D] via-[#F1613C] to-[#96402A]",
+    flying : "bg-gradient-to-t from-[#BFCBEC] to-[#5575CB]",
+    poison : "bg-gradient-to-t from-[#CE9BFF] via-[#A564E3] to-[#5B3184]",
+    ground : "bg-gradient-to-t from-[#D69638] via-[#895C1A] to-[#654008]",
+    rock : "bg-gradient-to-t from-[#D3D3D3] via-[#8D8D94] to-[#7E7E7E]",
+    bug : "bg-gradient-to-t from-[#AAFFA8] to-[#3BB039]",
+    ghost : "bg-gradient-to-t from-[#787DDA] via-[#454AA8] to-[#323569]",
+    steel : "bg-gradient-to-t from-[#A8A8A8] via-[#728881] to-[#5E736C]",
+    fire : "bg-gradient-to-t from-[#E8AE1B] to-[#E35825]",
+    water : "bg-gradient-to-t from-[#82B2F1] to-[#1479FB]",
+    grass : "bg-gradient-to-t from-[#CAE099] via-[#ABDAC6] to-[#7EC6C5]",
+    electric : "bg-gradient-to-t from-[#FEFE33] via-[#FFDD1A] to-[#FFBB00]",
+    psychic : "bg-gradient-to-t from-[#FEC2D6] to-[#FE036A]",
+    ice : "bg-gradient-to-t from-[#CDEBFE] to-[#6FBEDF]",
+    dragon : "bg-gradient-to-t from-[#A2BEC1] via-[#56A4AE] to-[#478A93]",
+    dark : "bg-gradient-to-t from-[#5A5E5D] via-[#0D1211] to-[#030706]",
+    fairy : "bg-gradient-to-t from-[#CD7D98] via-[#C23867] to-[#971B45]",
+    unknown : "",
+    shadow : "", 
+};
+
+const borderByType = {
+  normal : "border-[#735259]",
+  fighting : "border-[#96402A]",
+  flying : "border-[#5575CB]",
+  poison : "border-[#5B3184]",
+  ground : "border-[#654008]",
+  rock : "border-[#7E7E7E]",
+  bug : "border-[#3BB039]",
+  ghost : "border-[#323569]",
+  steel : "border-[#5E736C]",
+  fire : "border-[#E35825]",
+  water : "border-[#1479FB]",
+  grass : "border-[#7EC6C5]",
+  electric : "border-[#FFBB00]",
+  psychic : "border-[#FE036A]",
+  ice : "border-[#6FBEDF]",
+  dragon : "border-[#478A93]",
+  dark : "border-[#030706]",
+  fairy : "border-[#971B45]",
+  unknown : "",
+  shadow : "", 
+};
+
+  
+  export { bgByType, borderByType };
