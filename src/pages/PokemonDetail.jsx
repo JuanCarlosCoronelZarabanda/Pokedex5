@@ -12,6 +12,17 @@ const PokemonDetail = () => {
   console.log(types)
 
 
+  function obtenerTipoPokemon(pokemon) {
+    if (pokemon && pokemon.types) {
+      if (pokemon.types[1] && pokemon.types[1].type && pokemon.types[1].type.name) {
+        return pokemon.types[1].type.name;
+      } else if (pokemon.types[0] && pokemon.types[0].type && pokemon.types[0].type.name) {
+        return pokemon.types[0].type.name;
+      }
+    }
+    return "Tipo no encontrado"; // solucion al bug que comente en el class center 
+  }
+
 
 
 
@@ -34,7 +45,7 @@ const PokemonDetail = () => {
       <HeaderPokeball />
       <article className="max-w-[500px] mx-auto py-1 px-2 border-[8px] border-gray-200" >
      
-        <header className={`${bgByType[pokemon?.types[0].type.name]} border-[6px] ${ borderByType[pokemon?.types[1].type.name]}`} >
+        <header className={`${bgByType[pokemon?.types[0].type.name]} border-[6px] ${ borderByType[obtenerTipoPokemon(pokemon)]}`} >
           <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
         </header>
 
@@ -43,18 +54,19 @@ const PokemonDetail = () => {
           <h3>{pokemon?.name}</h3>
         </div>
 
-
+        <h3 className="text-center text-xl break-words font-semibold py-5">Types</h3>
         <div className="grid grid-cols-2 gap-1  py-1">
+          
           <div>
-            <h3 className=" text-center text-xl break-words font-semibold">Types</h3>
+            
             <div className={`w-full py-2 h-[50px] text-md text-center text-violet-950 ${bgByType[pokemon?.types[0].type.name]}`}>
               <span >{pokemon?.types[0].type.name}</span>
             </div>
           </div>
           <div>
-            <h3 className="text-xl   break-words font-semibold">Abilities</h3>
-            <div className={` w-full py-2 h-[50px] text-md text-center text-violet-950 ${bgByType[pokemon?.types[1].type.name]}`}>
-              <span >{pokemon?.types[1].type.name}</span>
+           
+            <div className={` w-full py-2 h-[50px] text-md text-center text-violet-950 ${bgByType[obtenerTipoPokemon(pokemon)]}`}>
+              <span >{obtenerTipoPokemon(pokemon)}</span>
             </div>
           </div>
         </div>
